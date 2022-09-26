@@ -9,7 +9,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           pullRequestOpened: |
             Hooray, you just opened a PR!! {{ payload.updated_at }}
-          pullRequestSynchonize: |
+          pullRequestSynchronize: |
             Additional changes made at: {{ payload.updated_at }}
           pullRequestReviewRequested: |
             Assignment initially submitted at: {{ payload.updated_at }}
