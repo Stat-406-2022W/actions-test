@@ -9,6 +9,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           pullRequestOpened: |
             Hooray!! {{ payload.updated_at }}
+          issuesEdited: |
+            Additional changes at: {{ payload.updated_at }}
           pullRequestReviewRequested: |
             Assignment initially submitted at {{ payload.updated_at }}
           pullRequestEdited: |
