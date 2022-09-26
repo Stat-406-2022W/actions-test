@@ -1,0 +1,16 @@
+name: Time Stamper
+on: [pull_request]
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: wow-actions/auto-comment@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+          pullRequestReviewRequested: |
+            Assignment initially submitted at {{ payload.updated_at }}
+          pullRequestEdited: |
+            PR modified at {{ payload.updated_at }}
+          pullRequestReopened: |
+            PR reopened at {{ payload.updated_at }}
