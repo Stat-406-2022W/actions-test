@@ -8,12 +8,12 @@ jobs:
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           pullRequestOpened: |
-            Hooray!! {{ payload.updated_at }}
-          issuesEdited: |
-            Additional changes at: {{ payload.updated_at }}
+            Hooray, you just opened a PR!! {{ payload.updated_at }}
+          pullRequestSynchonize: |
+            Additional changes made at: {{ payload.updated_at }}
           pullRequestReviewRequested: |
-            Assignment initially submitted at {{ payload.updated_at }}
+            Assignment initially submitted at: {{ payload.updated_at }}
           pullRequestEdited: |
-            PR modified at {{ payload.updated_at }}
+            PR modified at: {{ payload.updated_at }}
           pullRequestReopened: |
-            PR reopened at {{ payload.updated_at }}
+            PR reopened at: {{ payload.updated_at }}
